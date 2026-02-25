@@ -39,8 +39,9 @@ describe("MyGreeterTest", () => {
     expect(message).toBe("Good evening");
 
     // mock hour 05:00
-    jest.useFakeTimers().setSystemTime(new Date(2025, 1, 25, 21, 0, 0));
+    jest.useFakeTimers().setSystemTime(new Date(2025, 1, 25, 5, 0, 0));
     const message2 = greeter.greeting();
     expect(message2).toBe("Good evening");
   });
 });
+
